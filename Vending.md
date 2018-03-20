@@ -1,4 +1,4 @@
-# Vending machine
+# Vending Machine Requirements
 ## Security
 ### Counterfeit
 #### Coins
