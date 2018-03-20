@@ -4,28 +4,29 @@
 - VS2 - The system shall be accessible only by the owner, through a key, otherwise the internal inventory remains secured and inaccessible to others.
 - VS3 - The system shall determine whether or not credit/debit cards have sufficient funds to cover the transaction(ref. TODO).
 ## Maintenance
-- VMA1.  VMA1.  The system shall provide a refrigerant system that maintains a consistant temperature of drinks in 
+- VMA1.  The system shall provide a refrigerant system that maintains a consistant temperature of drinks in 
          inventory (Ref. TODO) at a temperature range between 38 and 45 degrees fahrenheiht.
 
 - VMA2.  The system shall detect conditions that prevent the vending system from dispensing drinks as requested 
          by the customer from the interface (Ref TODO).
 
--  VMA3.  The system shall provide secure access (Ref. TODO) to inventory shelving (Ref. TODO) for the purposes of 
+- VMA3.  The system shall provide secure access (Ref. TODO) to inventory shelving (Ref. TODO) for the purposes of 
            replenishing the drink inventory (Ref. TODO)
 
 ## Money
-- Return change
-  -M1 - The change dispensing system shall return the appropriate amount of change when the customer inserts change or cash.   
-  -M2 - The change dispensing system shall display money still needed to pay for purchase.
-- Senses if the money compartment is full
-  -MC1 - The system shall display money compartment is full message.
-  -MC2 - The system shall display money compartment coins status per coin.
-  -MC3 - The change dispensing systen shall provide space for each of the pennies(1 Cent)/nickels(5 Cents)/dimes(10 Cents)/quarters(25 Cents).
-  -MC4 - The change dispensing system shall limit coin category maximum(full) capacity per coin.
-  -MC5 - The change dispensing system shall provide space for $1.00, $5.00, $10.00, $20.00 bills.
-  -MC6 - The change dispensing system shall limit cash category maximum(full) capacity per bill.
-- Senses if the change drawer is empty
-  -MCD1 - The system shall display change drawer is empty message.
+### Return change
+  - M1 - The change dispensing system shall return the appropriate amount of change when the customer inserts change or cash.   
+  - M2 - The change dispensing system shall display money still needed to pay for purchase.
+### Senses if the money compartment is full
+  - MC1 - The system shall display money compartment is full message.
+  - MC2 - The system shall display money compartment coins status per coin.
+  - MC3 - The change dispensing systen shall provide space for each of the pennies(1 Cent)/nickels(5 Cents)/dimes(10 Cents)/quarters(25 Cents).
+  - MC4 - The change dispensing system shall limit coin category maximum(full) capacity per coin.
+  - MC5 - The change dispensing system shall provide space for $1.00, $5.00, $10.00, $20.00 bills.
+  - MC6 - The change dispensing system shall limit cash category maximum(full) capacity per bill.
+### Senses if the change drawer is empty
+  - MCD1 - The system shall display change drawer is empty message.
+  
 ## Interface (GREG) testing...
 - Receives money
 
