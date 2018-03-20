@@ -1,8 +1,21 @@
 # Vending machine
 ## Security
+### Counterfeit
+#### Coins
+- VSCC1 - Upon insertion of a coin (ref. TODO) the system shall determine whether it is legitimate US currency.
+- VSCC2 - Upon insertion of a counterfeit coin (ref. VSCC1) the system shall return the coin to the customer.
+
+#### Bills
+- VSCB1 - Upon insertion of a bill (ref. TODO) the system shall determine whether it is legitimate US currency.
+- VSCB2 - Upon insertion of a counterfeit bill (ref. VSCB1) the system shall return the bill to the customer.
+
+### Other
+
 - VS1 - The system shall identify whether or not money is American and valid, or counterfeit(ref. TODO).
 - VS2 - The system shall be accessible only by the owner, through a key, otherwise the internal inventory remains secured and inaccessible to others.
 - VS3 - The system shall determine whether or not credit/debit cards have sufficient funds to cover the transaction(ref. TODO).
+
+
 ## Maintenance
 - VMA1.  The system shall provide a refrigerant system that maintains a consistant temperature of drinks in 
          inventory (Ref. TODO) at a temperature range between 38 and 45 degrees fahrenheiht.
@@ -18,6 +31,9 @@
   - M1 - The change dispensing system shall return the appropriate amount of change when the customer inserts change or cash.   
   - M2 - The change dispensing system shall display money still needed to pay for purchase.
 ### Senses if the money compartment is full
+ - MC0 - The system shall provide a storage compartment for storing received currency.
+ - MC01 - The system shall provide a storage compartment separate from the recieved currency compartment (ref. MC0) to store coins for use as change.
+ - MC01 - The system shall provide a storage compartment separate from the recieved currency compartment (ref. MC0) to store bills for use as change.
   - MC1 - The system shall display money compartment is full message.
   - MC2 - The system shall display money compartment coins status per coin.
   - MC3 - The change dispensing systen shall provide space for each of the pennies(1 Cent)/nickels(5 Cents)/dimes(10 Cents)/quarters(25 Cents).
@@ -32,8 +48,8 @@
 - IR1 - The system shall provide a means of receiving paper currency.
 - IR2 - The system shall provide a means of receiving coin currency.
 - IR3 - The system shall provide a means of reading a credit/debit card.
-- IR4 - Upon receiving paper currency (ref. IR1), when the currency is determined to be real (ref. TODO), the system shall identify the amount of the currency.
-- IR5 - Upon receiving coin currency (ref. IR2), when the currency is determined to be real (ref. TODO), the system shall identify the amount of the currency.
+- IR4 - Upon receiving paper currency (ref. IR1), and when the currency is determined not to be counterfeit (ref. VSCB1), the system shall identify the denomination of the currency.
+- IR5 - Upon receiving coin currency (ref. IR2), and when the currency is determined not to be counterfeit (ref. VSCC1), the system shall identify the denomination of the currency.
 - IR6 - Upon identifying the amount of currency received (ref. IR1 and IR2), the system shall update the amount received.
 - IR7 - Upon update of amount received (ref. IR6), the system will hold any authorization for 60 seconds or beverage dispensed or canceled.
 - IR8 - Upon update of amount received (ref. IR6), the system will hold any currency received until beverage dispensed or canceled.
