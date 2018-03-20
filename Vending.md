@@ -1,58 +1,54 @@
 # Vending machine
 ## Security
-- Ensures money is real
-- Secures internal inventory
-- Validates credit/debit cards
-
+- VS1 - The system shall identify whether or not money is American and valid, or counterfeit(ref. TODO).
+- VS2 - The system shall be accessible only by the owner, through a key, otherwise the internal inventory remains secured and inaccessible to others.
+- VS3 - The system shall determine whether or not credit/debit cards have sufficient funds to cover the transaction(ref. TODO).
 ## Maintenance
-- Runs a refrigerant system
+- VMA1.  VMA1.  The system shall provide a refrigerant system that maintains a consistant temperature of drinks in 
+         inventory (Ref. TODO) at a temperature range between 38 and 45 degrees fahrenheiht.
 
-- Senses issues with the vending system
+- VMA2.  The system shall detect conditions that prevent the vending system from dispensing drinks as requested 
+         by the customer from the interface (Ref TODO).
 
-- Provides a method of restocking
+-  VMA3.  The system shall provide secure access (Ref. TODO) to inventory shelving (Ref. TODO) for the purposes of 
+           replenishing the drink inventory (Ref. TODO)
 
 ## Money
 - Return change
-
+  -M1 - The change dispensing system shall return the appropriate amount of change when the customer inserts change or cash.   
+  -M2 - The change dispensing system shall display money still needed to pay for purchase.
 - Senses if the money compartment is full
-
+  -MC1 - The system shall display money compartment is full message.
+  -MC2 - The system shall display money compartment coins status per coin.
+  -MC3 - The change dispensing systen shall provide space for each of the pennies(1 Cent)/nickels(5 Cents)/dimes(10 Cents)/quarters(25 Cents).
+  -MC4 - The change dispensing system shall limit coin category maximum(full) capacity per coin.
+  -MC5 - The change dispensing system shall provide space for $1.00, $5.00, $10.00, $20.00 bills.
+  -MC6 - The change dispensing system shall limit cash category maximum(full) capacity per bill.
 - Senses if the change drawer is empty
+  -MCD1 - The system shall display change drawer is empty message.
+## Interface (GREG) testing...
+- Receives money
 
-## Interface
-### Receives money
-- IR1 - The system shall provide a means of receiving paper currency.
-- IR2 - The system shall provide a means of receiving coin currency.
-- IR3 - The system shall provide a means of reading a credit/debit card.
-- IR4 - Upon receiving paper currency (ref. IR1), when the currency is determined to be real (ref. TODO), the system shall identify the amount of the currency.
-- IR5 - Upon receiving coin currency (ref. IR2), when the currency is determined to be real (ref. TODO), the system shall identify the amount of the currency.
-- IR6 - Upon identifying the amount of currency received (ref. IR1 and IR2), the system shall update the amount received.
-- IR7 - Upon update of amount received (ref. IR6), the system will hold any authorization for 60 seconds or beverage dispensed or canceled.
-- IR8 - Upon update of amount received (ref. IR6), the system will hold any currency received until beverage dispensed or canceled.
+- Displays products & prices
 
-### Displays products & prices
-- ID1 - The system will provide a means of selecting 12 unique categories of beverages.
-- ID2 - The system will provide a means of identifying the price of each of the 12 unique categories.
-- ID3 - 
+- Provides product selector
 
-### Provides product selector
+- Scans credit/debit cards
 
-### Scans credit/debit cards
-- IS1 - Upon reading a credit/debit card, the system will initiate credit/debit authorization.
+- Notify when a product is not available
 
-### Notify when a product is not available
-
-### Notify when insufficient currency has been provided
+- Notify when insufficient currency has been provided
    
 
 ## Vending
 ### Maintains an inventory
-- VI1 - The system shall provide shelving appropriate for canned beverages.
-- VI2 - The system shall provide space for up to 12 categories of beverage.
-- VI3 - The system shall uniquely identify drink categories.
-- VI4 - The system shall maintain a count of beverages in each drink category.
+- [ ] VI1 - The system shall provide shelving appropriate for canned beverages.
+- [ ] VI2 - The system shall provide space for up to 12 categories of beverage.
+- [ ] VI3 - The system shall uniquely identify drink categories.
+- [ ] VI4 - The system shall maintain a count of beverages in each drink category.
 
 ### Vend products selected
-- VV1 - Upon receiving a drink selection (ref. TODO), when the specified quantity of currency for the selected category has been inserted (ref. TODO), and while drinks are in inventory to vend (ref. VI4) the system shall dispense at most one of the selected category of drink.
+- [ ] VV1 - Upon receiving a drink selection (ref. TODO), when the specified quantity of currency for the selected category has been inserted (ref. TODO), and while drinks are in inventory to vend (ref. VI4) the system shall dispense at most one of the selected category of drink.
 
-- VV2 - Upon vending a drink (ref. VV1), the system shall reduce the inventory count (ref. VI4) for the drink category by one prior to accepting further user input.
+- [ ] VV2 - Upon vending a drink (ref. VV1), the system shall reduce the inventory count (ref. VI4) for the drink category by one prior to accepting further user input.
 
