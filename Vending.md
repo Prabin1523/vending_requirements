@@ -27,18 +27,31 @@
 ### Senses if the change drawer is empty
   - MCD1 - The system shall display change drawer is empty message.
   
-## Interface (GREG) testing...
-- Receives money
+## Interface
+### Receives money
+- IR1 - The system shall provide a means of receiving paper currency.
+- IR2 - The system shall provide a means of receiving coin currency.
+- IR3 - The system shall provide a means of reading a credit/debit card.
+- IR4 - Upon receiving paper currency (ref. IR1), when the currency is determined to be real (ref. TODO), the system shall identify the amount of the currency.
+- IR5 - Upon receiving coin currency (ref. IR2), when the currency is determined to be real (ref. TODO), the system shall identify the amount of the currency.
+- IR6 - Upon identifying the amount of currency received (ref. IR1 and IR2), the system shall update the amount received.
+- IR7 - Upon update of amount received (ref. IR6), the system will hold any authorization for 60 seconds or beverage dispensed or canceled.
+- IR8 - Upon update of amount received (ref. IR6), the system will hold any currency received until beverage dispensed or canceled.
 
-- Displays products & prices
+### Displays products & prices
+- ID1 - The system will provide a means of selecting 12 unique categories of beverages.
+- ID2 - The system will provide a means of identifying the price of each of the 12 unique categories.
+- ID3 - 
 
-- Provides product selector
+### Provides product selector
 
-- Scans credit/debit cards
+### Scans credit/debit cards
+- IS1 - Upon reading a credit/debit card, the system will initiate credit/debit authorization.
 
-- Notify when a product is not available
+### Notify when a product is not available
 
-- Notify when insufficient currency has been provided
+### Notify when insufficient currency has been provided
+   
    
 
 ## Vending
